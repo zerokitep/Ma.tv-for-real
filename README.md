@@ -11,7 +11,7 @@ You can update the `styles/index.scss` or create new `.scss` files inside `style
 ### Components
 Add more files into your `./src/js/components` or styles folder as you need them and import them into your current files as needed.
 
-💡Note: There is an example using the Context API inside `views/demo.js`;
+💡Note: There is an example using the Context API inside ;
 
 ### Views (Components)
 Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
