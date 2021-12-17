@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import requests from "../store/requests";
-import "../../styles/home.css";
+import "../../styles/Home.css";
 import Row from "../component/Row";
 
 export const Home = () => {
   return (
     <div className="text-center mt-5">
+      {/* Nav*/}
+      {/*Banner/Top*/}
+
       <h1>MA-TV</h1>
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} isLargeRow />
       <Row title="MA-TV ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />
