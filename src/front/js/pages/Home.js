@@ -1,14 +1,15 @@
 import React from "react";
+import Top from "../component/Top";
 import requests from "../store/requests";
 import "../../styles/Home.css";
 import Row from "../component/Row";
+import Nav from "../component/Nav";
 
 export const Home = () => {
   return (
     <div className="text-center mt-5">
-      {/* Nav*/}
-      {/*Banner/Top*/}
-
+      <Nav />
+      <Top />
       <h1>MA-TV</h1>
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} isLargeRow />
       <Row title="MA-TV ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />

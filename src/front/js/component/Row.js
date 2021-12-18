@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "../store/axios";
 import "../../styles/Row.css";
+import requests from "../store/requests";
 
-const base_url = "https://image.tmdb.org/t/p/original/";
+const base_url = "https://image.tmdb.org/t/p/original//";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
 
@@ -16,7 +17,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.table(movies);
+  // console.table(movies);
 
   return (
     <div className="row">
