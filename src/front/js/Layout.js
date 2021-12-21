@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
+import Login from "./pages/Login";
 
 //create your first component
 export const Layout = () => {
@@ -15,8 +16,9 @@ export const Layout = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/"></Route>
-          <Route exact path="/"></Route>
+          <Route exact path="/">
+            <Login />
+          </Route>
           <Route>
             <h1>Not found!</h1>
           </Route>

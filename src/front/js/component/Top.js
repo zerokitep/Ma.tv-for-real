@@ -39,10 +39,10 @@ const Top = () => {
     >
       <div className="top_contents">
         <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
-        <div clasName="top_buttons">
+        {/* <div className="top_buttons">
           <button className="top_button">Play</button>
           <button className="top_button">My List</button>
-        </div>
+        </div> */}
         <h1 className="top_description">{truncate(movie?.overview, 150)}</h1>
       </div>
       <div className="top-fadeBottom" />

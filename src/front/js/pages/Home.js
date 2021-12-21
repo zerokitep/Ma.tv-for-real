@@ -6,6 +6,7 @@ import Row from "../component/Row";
 import Nav from "../component/Nav";
 import logo from "./logo.png";
 
+
 export const Home = () => {
   return (
     <div className="text-center mt-0 app">

@@ -20,8 +20,8 @@ function Nav() {
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <img className="nav-logo" src={logo3} alt="MA-logo" />
-      <div classname="nav_button mb-2">
-        <Button classname="button1" variant="dark" size="lg">
+      <div className="navbutton mb-2">
+        <Button className="button1" variant="dark" size="lg">
           Log In / Sign Up
         </Button>
       </div>
