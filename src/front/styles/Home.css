@@ -1,5 +1,14 @@
 * {
   margin: 0;
 }
+.app {
+  background-color: black;
+}
 
-
+.main-logo {
+  height: 400px;
+  width: 400px;
+  padding-top: 100px;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}

@@ -1,13 +1,13 @@
 .top {
   color: white;
   object-fit: contain;
-  height: 448px;
 }
 
 .top_contents {
   margin-left: 30px;
-  padding-top: 140px;
-  height: 190px;
+  padding-top: 200px;
+  height: 480px;
+  text-align: left;
 }
 
 .top_title {

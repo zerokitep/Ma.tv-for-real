@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Nav.css";
-import logo from "./logo.png";
+import logo3 from "./logo3.png";
+import Button from "react-bootstrap/Button";
 
-const Nav = () => {
+function Nav() {
+  const [show, handleShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else handleShow(false);
+    });
+    return () => {
+      window.removeEventListener("scroll");
+    };
+  }, []);
+
   return (
-    <div className="nav">
-      <img className="nav-logo" src={logo} alt="MA-logo" />
+    <div className={`nav ${show && "nav__black"}`}>
+      <img className="nav-logo" src={logo3} alt="MA-logo" />
+      <div classname="nav_button mb-2">
+        <Button classname="button1" variant="dark" size="lg">
+          Log In / Sign Up
+        </Button>
+      </div>
     </div>
   );
-};
+}
 
 export default Nav;
