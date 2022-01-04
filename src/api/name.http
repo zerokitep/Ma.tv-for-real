@@ -1,0 +1,8 @@
+POST  https://3001-white-ant-n9scbyv6.ws-us25.gitpod.io/api/register
+content-type: application/json
+
+{
+    "username":"zededero",
+    "email": "sampedadle@gmail.com",
+    "password": "1ed2d34"
+}
