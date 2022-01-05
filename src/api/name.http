@@ -1,8 +1,8 @@
-POST  https://3001-aqua-vicuna-ap07xv5q.ws-us25.gitpod.io/api/register
+POST  https://3001-turquoise-parrot-yhcsmsph.ws-us25.gitpod.io/api/register
 content-type: application/json
 
 {
-    "username":"zededero",
-    "email": "sampedadle@gmail.com",
+    "username":"zeededero",
+    "email": "sampeedadle@gmail.com",
     "password": "1ed2d34"
 }
