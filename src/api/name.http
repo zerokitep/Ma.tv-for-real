@@ -1,4 +1,4 @@
-POST  https://3001-white-ant-n9scbyv6.ws-us25.gitpod.io/api/register
+POST  https://3001-aqua-vicuna-ap07xv5q.ws-us25.gitpod.io/api/register
 content-type: application/json
 
 {

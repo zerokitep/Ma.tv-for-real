@@ -4,7 +4,9 @@ import { Home } from "./pages/Home";
 import Login from "./pages/Login";
 
 function Layout() {
-  const user = null;
+  const user = {
+    name: "a",
+  };
 
   return (
     <div className="app">
