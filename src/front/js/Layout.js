@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
 import Login from "./pages/Login";
-
+import { useEffect } from "react";
+import Register from "./pages/register";
 function Layout() {
   const user = {
-    name: "a",
+    user: "a",
   };
 
+  useEffect(() => {});
   return (
     <div className="app">
       <BrowserRouter>
@@ -20,6 +22,11 @@ function Layout() {
             </Route>
           </Switch>
         )}
+        <Switch>
+          <Route exact path="/Register">
+            <Register />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );

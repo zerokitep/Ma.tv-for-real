@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User,Movie,Favorites
+from api.models import db, User,Movies,Favorites
 from api.utils import generate_sitemap, APIException
 from argon2 import PasswordHasher
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from sqlalchemy import table
+
 
 
 
@@ -41,6 +42,7 @@ def register_user():
 
 @api.route('/login', methods=['POST'])
 def login_user():
+
     data = request.get_json(force=True)
     email = data['email']
     password = data['password']
@@ -67,8 +69,11 @@ def login_user():
 def user_info():
     current_user_id = get_jwt_identity()
     user = User.query.filter(User.id == current_user_id).first()
+    response_body={
+        "message":f"hello i am {user.email}"
+    }
 
-    return jsonify(user.serialize())
+    return jsonify(user.serialize(response_body)), 200
 
 
 # favorites page end points
@@ -101,7 +106,7 @@ def handle_favorites(user_id,imdb_id):
 
     # Delete favorites
     if request.method == 'DELETE':
-        Favorites.query.filter(Favorites.user_id=user_id,Favorites.imdb_id=imdb_id).delete()
+        Favorites.query.filter(Favorites.user_id==user_id,Favorites.imdb_id==imdb_id).delete()
         db.session.commit()
 
         return "Success", 200
@@ -110,7 +115,7 @@ def handle_favorites(user_id,imdb_id):
 @api.route('/favorite/user/<user_id>', methods=['GET'])
 def get_all_favorites(user_id):
 
-    favorites=Favorites.query.filter(Favorites.user_id=user_id)
+    favorites=Favorites.query.filter(Favorites.user_id==user_id)
 
     serialized_favorites = [item.serialize() for item in favorites]
     return jsonify(serialized_favorites), 200

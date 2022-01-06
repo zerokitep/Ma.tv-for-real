@@ -8,4 +8,17 @@ content-type: application/json
 }
 
 
-POST  https://3001-turquoise-parrot-yhcsmsph.ws-us25.gitpod.io/api/
+###
+POST  https://3001-turquoise-parrot-yhcsmsph.ws-us25.gitpod.io/api/login
+content-type: application/json
+
+{
+   
+    "username":"zeededero",
+    "email": "sampeedadle@gmail.com",
+    "password": "1ed2d34"
+}
+###
+
+GET  https://3001-turquoise-parrot-yhcsmsph.ws-us25.gitpod.io/api/userinfo
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0MTQ0OTI5MCwianRpIjoiNjA0NTNhMDMtNWYxMC00MTgwLWExYTktZjQ0OWY5M2IzODUzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQxNDQ5MjkwLCJleHAiOjE2NDE0NTAxOTB9.naOWRGBwsLBe7q1jZtTYnDmanW5n4ivAEINxAlgAKco

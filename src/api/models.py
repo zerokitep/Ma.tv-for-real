@@ -34,15 +34,15 @@ class Movies(db.Model):
     vote_count = db.Column(db.Integer)
 
     def serialize(self):
-        return{
-            "imdb_id":self.imdb_id
-            "original_language":self.original_language
-            "original_title":self.original_title
-            "release_date":self.release_date
-            "title":self.title
-            "vote_average":self.vote_average
-            "vote_count":self.vote_count
-        }
+        return {
+            "imdb_id":self.imdb_id,
+            "original_language":self.original_language,
+            "original_title":self.original_title,
+            "release_date":self.release_date,
+            "title":self.title,
+            "vote_average":self.vote_average,
+            "vote_count":self.vote_count,
+             }
 
 
 
@@ -55,8 +55,8 @@ class Favorites(db.Model):
 
     def serialize(self):
         return{
-            "user_id":self.user_id
-            "movie_id":self.movie_id
+            "user_id":self.user_id,
+            "movie_id":self.movie_id,
         }
     
 
