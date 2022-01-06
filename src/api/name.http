@@ -6,3 +6,6 @@ content-type: application/json
     "email": "sampeedadle@gmail.com",
     "password": "1ed2d34"
 }
+
+
+POST  https://3001-turquoise-parrot-yhcsmsph.ws-us25.gitpod.io/api/
