@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/LoginScreen.css";
 import logo from "./logo.png";
 import Button from "react-bootstrap/Button";
-import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 function Login() {
   const [signIn, setSignIn] = useState(false);
@@ -17,12 +17,12 @@ function Login() {
           variant="dark"
           size="lg"
         >
-          Sing In
+          Sign In
         </Button>
         <div className="loginScreen__gradient" />
         <div className="loginScreen__body">
           {signIn ? (
-            <SignUp />
+            <SignIn />
           ) : (
             <>
               <h1>Very limited films, TV programs and more </h1>
